@@ -4,7 +4,6 @@ var expect = chai.expect;
 var http = require('http');
 var fs = require('fs');
 chai.use(chaiHttp);
-
 require('../server.js');
 
 describe('server', function(done){
