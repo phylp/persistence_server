@@ -1,0 +1,28 @@
+{
+  "name": "persistence-server",
+  "version": "1.0.0",
+  "description": "Persistence Server",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phylp/persistence_server.git"
+  },
+  "author": "Phillip Son",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phylp/persistence_server/issues"
+  },
+  "homepage": "https://github.com/phylp/persistence_server#readme"
+}

@@ -23,8 +23,10 @@ describe('server', function(done){
   });
 });
 
-describe('server-post', function(done){
-  var oldDir = fs.readdirSync(__dirname + '/../json_logs').length;  
+
+
+describe('server-post', function(){
+  var oldCount = fs.readdirSync(__dirname + '/../json_logs').length;  
   before(function(done){
     chai.request('localhost:3002')
     .post('/upload')
@@ -34,7 +36,9 @@ describe('server-post', function(done){
     });
   });
   it('should create a new file', function(){
-    var newDir = fs.readdirSync(__dirname + '/../json_logs').length;
-    expect(oldDir).to.not.eql(newDir);
+    var newCount = fs.readdirSync(__dirname + '/../json_logs').length;
+    expect(oldCount).to.not.eql(newCount);
   }); 
 });
+
+//should clear out log folder on via after each or before each statement

@@ -1,13 +1,14 @@
 var http = require('http');
 var fs = require('fs');
+var dd = require('/lib/dataData');
 
 var counter = 0;
 var server = http.createServer(function(req, res){
   if(req.url === '/upload' && req.method === 'POST'){
-    counter += 1;
     req.on('data', function(data){
       var postData = JSON.parse(data);
       fs.writeFile(__dirname + '/json_logs/' + counter + '.json', data);
+      counter++;
       res.end();
     });
   }
